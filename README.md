@@ -6,5 +6,7 @@
 
 * the boxes challenge
 * the joke challenge
+* conditional rendering with message exercise
+* forms
 
 

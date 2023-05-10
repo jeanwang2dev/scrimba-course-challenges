@@ -1,25 +1,36 @@
 import React from "react"
 
-export default function App() {
-    const [messages, setMessages] = React.useState(["a"])
-    /**
-     * Challenge:
-     * - If there are no unread messages, display "You're all caught up!"
-     * - If there are > 0 unread messages, display "You have <n> unread
-     *   message(s)"
-     *      - If there's exactly 1 unread message, it should read "message"
-     *        (singular)
-     *   {messages.length === 0 && <p> You're all cauht up!</p>}
-            {messages.length > 0 && <p>You have {messages.length} unread { messages.length === 1 ? "message" : "messages"}</p>}
-     */
-    return (
-        <div>
-            {
-                messages.length === 0 ?
-                <h1>You're all caught up!</h1> :
-                <h1>You have {messages.length} unread { messages.length === 1 ? "message" : "messages"} </h1>
-            }
-        </div>
+export default function Form() {
+    const [firstName, setFirstName] = React.useState("")
+    const [lastName, setLastName] = React.useState("")
 
+    function handleChangeFN(event) {
+        //console.log(event.target.value)
+        setFirstName( event.target.value)
+         
+    }
+
+    function handleChangeLN(event) {
+        //console.log(event.target.value)
+        setLastName( event.target.value)
+         
+    }
+    
+    return (
+        <form className="p-4">
+            <input
+                className="border-2 p-3 "
+                type="text"
+                placeholder="First Name"
+                onChange={handleChangeFN}
+            />
+
+            <input
+                className="border-2 p-3 "
+                type="text"
+                placeholder="Last Name"
+                onChange={handleChangeLN}
+            />
+        </form>
     )
 }
