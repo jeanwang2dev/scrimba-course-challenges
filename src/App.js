@@ -6,10 +6,12 @@ export default function Form() {
         firstName: "",
         lastName: "",
         email: "",
-        comments: ""
+        comments: "",
+        isFriendly: true,
+        employment: ""
     })
 
-    console.log(formData)
+    console.log(formData.employment)
 
     function handleChange(event) {
         // console.log(event.target.name)
@@ -21,11 +23,11 @@ export default function Form() {
             return newFormData
         })
         */
-        
+        const { name, value, type, checked} = event.target
         setFormData( prevFormData => {
             return {
                 ...prevFormData,
-                [event.target.name]: event.target.value
+                [name]: type === 'checkbox' ? checked:value
             }
         })
         
@@ -65,7 +67,55 @@ export default function Form() {
                     onChange={handleChange}
                     value={formData.comments}
                 />
+                <div>
+                    <input 
+                        type="checkbox"
+                        id="isFriendly"
+                        name="isFriendly"  
+                        onChange={handleChange}
+                        checked={formData.isFriendly}  
+                    />
+                    <label htmlFor="isFriendly"> Are you friendly</label>
+                </div>
+
+                <fieldset className="border border-solid border-black p-3">
+                    <legend>Current employment status</legend>
+                    
+                    <input 
+                        type="radio"
+                        id="unemployed"
+                        name="employment"
+                        value="unemployed"
+                        onChange={handleChange}
+
+                    />
+                    <label htmlFor="unemployed">Unemployed</label>
+                    <br />
+                    
+                    <input 
+                        type="radio"
+                        id="part-time"
+                        name="employment"
+                        value="part-time"
+                        onChange={handleChange}
+                    />
+                    <label htmlFor="part-time">Part-time</label>
+                    <br />
+                    
+                    <input 
+                        type="radio"
+                        id="full-time"
+                        name="employment"
+                        value="full-time"
+                        onChange={handleChange}
+                    />
+                    <label htmlFor="full-time">Full-time</label>
+                    <br />
+                
+                </fieldset>
+
             </div>
+
 
         </form>
     )
