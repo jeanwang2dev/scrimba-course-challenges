@@ -8,10 +8,11 @@ export default function Form() {
         email: "",
         comments: "",
         isFriendly: true,
-        employment: ""
+        employment: "",
+        favColor: ""
     })
 
-    console.log(formData.employment)
+    console.log(formData.favColor)
 
     function handleChange(event) {
         // console.log(event.target.name)
@@ -116,6 +117,24 @@ export default function Form() {
                     <br />
                 
                 </fieldset>
+
+                <label htmlFor="favColor">What is your favorite color?</label>
+                <select 
+                    id="favColor" 
+                    value="formData.favColor"
+                    name="favColor"
+                    onChange={handleChange}
+                    className="w-fit"
+                >
+                    <option value="">---choose---</option>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="indigo">Indigo</option>
+                    <option value="violet">Violet</option>
+                </select>
 
             </div>
 
