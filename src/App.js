@@ -12,7 +12,7 @@ export default function Form() {
         favColor: ""
     })
 
-    console.log(formData.favColor)
+    //console.log(formData.favColor)
 
     function handleChange(event) {
         // console.log(event.target.name)
@@ -33,9 +33,15 @@ export default function Form() {
         })
         
     }
+
+    function handleSubmit(event) {
+        event.preventDefault()
+        // submit2API(formData)
+        console.log(formData)
+    }
     
     return (
-        <form className="p-4 max-w-sm mx-auto bg-gray-300">
+        <form onSubmit={handleSubmit} className="p-4 max-w-sm mx-auto bg-gray-200">
             <div className="flex flex-col space-y-3">
                 <input
                     className="form-input"
@@ -121,7 +127,7 @@ export default function Form() {
                 <label htmlFor="favColor">What is your favorite color?</label>
                 <select 
                     id="favColor" 
-                    value="formData.favColor"
+                    value={formData.favColor}
                     name="favColor"
                     onChange={handleChange}
                     className="w-fit"
@@ -136,6 +142,7 @@ export default function Form() {
                     <option value="violet">Violet</option>
                 </select>
 
+                <button className="btn">Submit</button>
             </div>
 
 
