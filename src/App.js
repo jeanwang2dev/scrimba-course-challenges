@@ -86,6 +86,7 @@ export default function Form() {
                         id="unemployed"
                         name="employment"
                         value="unemployed"
+                        checked={formData.employment === "unemployed"}
                         onChange={handleChange}
 
                     />
@@ -97,6 +98,7 @@ export default function Form() {
                         id="part-time"
                         name="employment"
                         value="part-time"
+                        checked={formData.employment === "part-time"}
                         onChange={handleChange}
                     />
                     <label htmlFor="part-time">Part-time</label>
@@ -107,6 +109,7 @@ export default function Form() {
                         id="full-time"
                         name="employment"
                         value="full-time"
+                        checked={formData.employment === "full-time"}
                         onChange={handleChange}
                     />
                     <label htmlFor="full-time">Full-time</label>
