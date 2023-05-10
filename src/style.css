@@ -5,3 +5,9 @@
 /* body {
     background-color: orange;
 } */
+
+@layer components{
+    .form-input {
+        @apply border-2 p-3 rounded-md;
+    }
+}

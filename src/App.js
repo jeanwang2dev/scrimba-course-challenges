@@ -5,7 +5,8 @@ export default function Form() {
     const [formData, setFormData] = React.useState({
         firstName: "",
         lastName: "",
-        email: ""
+        email: "",
+        comments: ""
     })
 
     console.log(formData)
@@ -31,32 +32,41 @@ export default function Form() {
     }
     
     return (
-        <form className="p-4">
-            <input
-                className="border-2 p-3 "
-                type="text"
-                name="firstName"
-                placeholder="First Name"
-                onChange={handleChange}
-                value={formData.firstName}
-            />
+        <form className="p-4 max-w-sm mx-auto bg-gray-300">
+            <div className="flex flex-col space-y-3">
+                <input
+                    className="form-input"
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                    onChange={handleChange}
+                    value={formData.firstName}
+                />
+                <input
+                    className="form-input"
+                    type="text"
+                    name="lastName"
+                    placeholder="Last Name"
+                    onChange={handleChange}
+                    value={formData.lastName}
+                />
+                <input
+                    className="form-input"
+                    type="email"
+                    name="email"
+                    placeholder="Youremail@domain.com"
+                    onChange={handleChange}
+                    value={formData.email}
+                />
+                <textarea
+                    className="form-input"
+                    name="comments"
+                    placeholder="Your comment goes here"
+                    onChange={handleChange}
+                    value={formData.comments}
+                />
+            </div>
 
-            <input
-                className="border-2 p-3 "
-                type="text"
-                name="lastName"
-                placeholder="Last Name"
-                onChange={handleChange}
-                value={formData.lastName}
-            />
-            <input
-                className="border-2 p-3 "
-                type="email"
-                name="email"
-                placeholder="Youremail@domain.com"
-                onChange={handleChange}
-                value={formData.email}
-            />
         </form>
     )
 }
