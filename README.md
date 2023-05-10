@@ -6,5 +6,6 @@
 
 * the boxes challenge
 * the joke challenge
+* the mesages challenge
 
 
