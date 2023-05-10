@@ -8,10 +8,10 @@
 
 @layer components{
     .form-input {
-        @apply border-2 p-3 rounded-md;
+        @apply border border-black p-3 rounded-md;
     }
 
     .btn {
-        @apply bg-blue-500 hover:bg-blue-700 text-sm text-white font-bold py-2 px-4 rounded mb-2;
+        @apply w-fit bg-purple-800 hover:bg-purple-700 text-sm text-white font-bold py-2 px-4 rounded mb-2;
       }
 }

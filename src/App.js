@@ -1,48 +1,60 @@
 import React from "react"
-import userHeadShot from "./img/user.png"
-import emptyStar from "./img/star-empty.png"
-import filledStar from "./img/star-filled.png"
-
 
 export default function App() {
-    const [contact, setContact] = React.useState({
-        firstName: "John",
-        lastName: "Doe",
-        phone: "+1 (719) 555-1212",
-        email: "itsmyrealname@example.com",
-        isFavorite: false
-    })
     
-    let starIcon = contact.isFavorite ? filledStar : emptyStar
+    /**
+     * Challenge: Connect the form to local state
+     * 
+     * 1. Create a state object to store the 4 values we need to save.
+     * 2. Create a single handleChange function that can
+     *    manage the state of all the inputs and set it up
+     *    correctly
+     * 3. When the user clicks "Sign up", check if the 
+     *    password & confirmation match each other. If
+     *    so, log "Successfully signed up" to the console.
+     *    If not, log "passwords to not match" to the console.
+     * 4. Also when submitting the form, if the person checked
+     *    the "newsletter" checkbox, log "Thanks for signing
+     *    up for our newsletter!" to the console.
+     */
     
-    function toggleFavorite() {
-        //console.log("Toggle Favorite")
-        setContact( preContact => {
-            return {
-                ...preContact,
-                isFavorite: !preContact.isFavorite
-            }
-        })
+    function handleSubmit(event) {
+        event.preventDefault()
     }
     
     return (
-        <main className="p-2">
-            <article className="max-w-sm rounded overflow-hidden shadow-xl mx-auto p-12">
-                <img src={userHeadShot} className="w-full" />
-                <div className="card--info">
-                    <img 
-                        src={starIcon}
-                        className="w-8 mb-3"
-                        onClick={toggleFavorite}
-                    />
-                    <h2 className="font-bold text-xl">
-                        {contact.firstName} {contact.lastName}
-                    </h2>
-                    <p className="text-base">{contact.phone}</p>
-                    <p className="text-base">{contact.email}</p>
-                </div>
+        <div className="max-w-md mx-auto bg-purple-800 p-8">
+            <form className="flex flex-col items-center space-y-5 p-12 bg-white rounded drop-shadow-xl" onSubmit={handleSubmit}>
+                <input 
+                    type="email" 
+                    placeholder="Email address"
+                    className="form-input"
+                />
+                <input 
+                    type="password" 
+                    placeholder="Password"
+                    className="form-input"
+                />
+                <input 
+                    type="password" 
+                    placeholder="Confirm password"
+                    className="form-input"
+                />
                 
-            </article>
-        </main>
+                <div className="flex space-x-4">
+                    <input
+                        id="okayToEmail"
+                        type="checkbox"
+                        
+                    />
+                    <label htmlFor="okayToEmail">I want to join the newsletter</label>
+                </div>
+                <button 
+                    className="btn"
+                >
+                    Sign up
+                </button>
+            </form>
+        </div>
     )
 }
