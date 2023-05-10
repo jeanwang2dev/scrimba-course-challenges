@@ -4,11 +4,12 @@ export default function Form() {
     // save state in an object
     const [formData, setFormData] = React.useState({
         firstName: "",
-        lastName: ""
+        lastName: "",
+        email: ""
     })
 
     console.log(formData)
-    
+
     function handleChange(event) {
         // console.log(event.target.name)
         // let fieldName = event.target.name
@@ -37,6 +38,7 @@ export default function Form() {
                 name="firstName"
                 placeholder="First Name"
                 onChange={handleChange}
+                value={formData.firstName}
             />
 
             <input
@@ -45,6 +47,15 @@ export default function Form() {
                 name="lastName"
                 placeholder="Last Name"
                 onChange={handleChange}
+                value={formData.lastName}
+            />
+            <input
+                className="border-2 p-3 "
+                type="email"
+                name="email"
+                placeholder="Youremail@domain.com"
+                onChange={handleChange}
+                value={formData.email}
             />
         </form>
     )
