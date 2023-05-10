@@ -7,6 +7,7 @@
 * the boxes challenge
 * the joke challenge
 * conditional rendering with message exercise
-* forms
+* forms basic
+* name card challenge
 
 
