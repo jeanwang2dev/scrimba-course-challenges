@@ -12,7 +12,7 @@ export default function App() {
     const [show, setShow] = useState(true)
 
     function toggle(){
-        console.log('toggle')
+        // console.log('toggle')
         setShow( prevShow => !prevShow )
     }
     
