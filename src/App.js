@@ -1,25 +1,27 @@
-import React from "react"
+import React, {useState} from "react"
+import WindowTracker from "./components/WindowTracker"
 
 export default function App() {
-    const [starWarsData, setStarWarsData] = React.useState({})
-    const [count, setCount] = React.useState(1)
-    
-    console.log("Component rendered")
-    
-    // side effects
-    React.useEffect(function() {
-        console.log("Effect ran")
-        fetch(`https://swapi.dev/api/people/${count}`)
-            .then(res => res.json())
-            .then(data => setStarWarsData(data))
-    }, [count])
+    /**
+     * Challenge:
+     * 1. Create state called `show`, default to `true`
+     * 2. When the button is clicked, toggle `show`
+     * 3. Only display `<WindowTracker>` if `show` is `true`
+     */
+
+    const [show, setShow] = useState(true)
+
+    function toggle(){
+        console.log('toggle')
+        setShow( prevShow => !prevShow )
+    }
     
     return (
-        <div className="max-w-sm mx-auto pt-4">
-            <h2 className="font-bold text-xl">The count is {count}</h2>
-            <button className="btn" onClick={() => setCount(prevCount => prevCount + 1)}>Get Next Character</button>
-            <pre>{JSON.stringify(starWarsData, null, 2)}</pre>          
+        <div className="flex flex-col items-center container bg-orange-600 mx-auto py-10">
+            <button onClick={toggle} className="btn">
+                Toggle WindowTracker
+            </button>
+            { show && <WindowTracker />}
         </div>
     )
 }
-
