@@ -1,10 +1,11 @@
-import { withExtraPropsAdded } from './components/withExtraPropsAdded'
+//import { withExtraPropsAdded } from './components/withExtraPropsAdded'
+import { withFavoriteNumber } from "./components/withFavoriteNumber"
 
 function App(props) {
     console.log(props)
     return (
-        <div>Hello! {props.name}</div>
+        <div>Hello! My Favorite Number is {props.favNumber}</div>
     )
 }
 
-export default withExtraPropsAdded(App)
+export default withFavoriteNumber(App)
