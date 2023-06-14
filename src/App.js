@@ -1,11 +1,15 @@
-//import { withExtraPropsAdded } from './components/withExtraPropsAdded'
-import { withFavoriteNumber } from "./components/withFavoriteNumber"
+import React from "react"
+import Menu from "./components/Menu"
+import Favorite from "./components/Favorite"
 
-function App(props) {
-    console.log(props)
+function App() {
     return (
-        <div>Hello! My Favorite Number is {props.favNumber}</div>
+        <div>
+            <Menu />
+            <hr />
+            <Favorite />
+        </div>
     )
 }
 
-export default withFavoriteNumber(App)
+export default App
