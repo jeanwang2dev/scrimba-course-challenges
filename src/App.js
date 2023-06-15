@@ -4,7 +4,7 @@ import Favorite from "./components/Favorite"
 
 function App() {
     return (
-        <div>
+        <div className="container mx-auto p-3">
             <Menu />
             <hr />
             <Favorite />

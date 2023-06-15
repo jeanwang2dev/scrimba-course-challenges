@@ -1,17 +1,7 @@
 import React, {Component} from "react"
+import { withToggler } from "./HOCs/withToggler"
 
 class Favorite extends Component {
-    state = {
-        isFavorited: false
-    }
-    
-    toggleFavorite = () => {
-        this.setState(prevState => {
-            return {
-                isFavorited: !prevState.isFavorited
-            }
-        })
-    }
     
     render() {
         return (
@@ -19,9 +9,9 @@ class Favorite extends Component {
                 <h3>Click heart to favorite</h3>
                 <h1>
                     <span 
-                        onClick={this.toggleFavorite}
+                        onClick={this.props.toggle}
                     >
-                        {this.state.isFavorited ? "❤️" : "♡"}
+                        {this.props.on ? "❤️" : "♡"}
                     </span>
                 </h1>
             </div>
@@ -29,4 +19,4 @@ class Favorite extends Component {
     }
 }
 
-export default Favorite
+export default withToggler(Favorite)
