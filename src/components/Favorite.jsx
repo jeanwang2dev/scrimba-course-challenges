@@ -3,22 +3,20 @@ import Toggler from "./Toggler"
 
 function Favorite(props) {
     return (
-        <Toggler render={ function(onState, toggle) {
-            return (
-                <div>
-                    <h3>Click heart to favorite</h3>
-                    <h1>
-                        <span 
-                            onClick={toggle}
-                        >
-                            {onState ? "❤️" : "♡"}
-                        </span>
-                    </h1>
-                </div>
-            )
-        }}
-        
-        />
+        <Toggler render={ 
+            (onState, toggle) => (
+                    <div>
+                        <h3>Click heart to favorite</h3>
+                        <h1>
+                            <span 
+                                onClick={toggle}
+                            >
+                                {onState ? "❤️" : "♡"}
+                            </span>
+                        </h1>
+                    </div>
+                )
+        }/>
     ) 
 }
 
