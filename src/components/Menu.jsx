@@ -4,7 +4,7 @@ import Toggler from "./Toggler"
 function Menu(props) {
     return (
         <Toggler defaultOnValue={true} render={
-            (on, toggle) => (
+            ({on, toggle}) => (
                 <div className="mb-4">
                     <button className="border bg-gray-300 p-1.5 rounded" onClick={toggle}>{on ? "Hide" : "Show"} Menu </button>
                     <nav style={{display: on ? "block" : "none"}}>

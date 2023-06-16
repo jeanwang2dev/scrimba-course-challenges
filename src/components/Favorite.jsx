@@ -4,14 +4,14 @@ import Toggler from "./Toggler"
 function Favorite(props) {
     return (
         <Toggler render={ 
-            (onState, toggle) => (
+            ({on, toggle}) => (
                     <div>
                         <h3>Click heart to favorite</h3>
                         <h1>
                             <span 
                                 onClick={toggle}
                             >
-                                {onState ? "❤️" : "♡"}
+                                {on ? "❤️" : "♡"}
                             </span>
                         </h1>
                     </div>
