@@ -2,7 +2,7 @@ function Example(props) {
     //console.log(props.name())
     return (
         <div>
-            {props.render(true)}
+            {props.render(-9)}
         </div>
     )
 }

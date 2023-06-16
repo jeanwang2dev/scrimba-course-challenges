@@ -7,11 +7,9 @@ function App() {
             {/*<Example name={["Jane", "Bob"]}/> */}
             {/*<Example name={ function() { return "Hey there!"}} />*/}
             <Example render={
-                function(isDayTime) {
+                function(number) {
                     return (
-                        <h1>{/*<h1>hey there, { sign && "hello" }</h1>*/
-                            isDayTime ? "Good Day!" : "Good Night!"
-                        }</h1>
+                        <h1>{number >= 0 ? "Positive" : "Negative"}</h1>
                         
                     )
                 }
