@@ -10,11 +10,7 @@ class Toggler extends Component {
     }
     
     toggle = () => {
-        this.setState(prevState => {
-            return {
-                on: !prevState.on
-            }
-        })
+        this.setState(prevState => ({on: !prevState.on}) )
     }
     
     render() {
