@@ -1,13 +1,11 @@
 import React from "react"
-import Menu from "./components/Menu"
-import Favorite from "./components/Favorite"
+import Example from "./components/Example"
 
 function App() {
     return (
         <div className="container mx-auto p-3">
-            <Menu />
-            <hr />
-            <Favorite />
+            {/*<Example name={["Jane", "Bob"]}/> */}
+            <Example name={ function() { return "Hey there!"}} />
         </div>
     )
 }
