@@ -13,7 +13,7 @@ class App extends Component {
                 <button className="border py-0.5 px-3.5 bg-gray-300 rounded" onClick={this.increment}>+1</button>
                 <h2>{this.state.count}</h2>
                 <p>I'm the App component</p>
-                <GrandParent />
+                <GrandParent blah="hello" count={this.state.count} />
                 <GrandParent />
             </div>
         )    
