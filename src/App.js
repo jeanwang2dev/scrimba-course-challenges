@@ -1,43 +1,23 @@
-import React from "react"
-import DataFetcher from "./components/DataFetcher"
+import React, {Component} from "react"
+import GrandParent from "./components/GrandParent"
 
-function App() {
-    return (
-        <div className="container mx-auto p-3">
-             <DataFetcher url="https://swapi.dev/api/people/1/">
-                {/**
-                 * Part 2: Call the function the DataFetcher is expecting.
-                 * If should receive the data and the loading state, and return the JSX
-                 * that makes use of that info. If the data is still loading, display
-                 * "Loading..." in an h1 element, and once the data has loaded, just display 
-                 * the data with `<p>{JSON.stringify(data)}</p>`
-                 * 
-                 * Remember: With the render props pattern, you can use a custom prop
-                 * (typically called `render`), OR you can use `props.children`. Based
-                 * on what's already written here for you, you should be able to figure
-                 * out which of these we're using. (You may have to make changes to the
-                 * DataFetcher component based on what you see here.)
-                 */
-                 ({isLoading, data, error}) => {
-                    let message
-                    if(error !== null) {
-                        message = "There is an error getting the Data!"
-                    } else {
-                        message = "Here is the data"
-                    }
-                    return(
-                        <>
-                            <p>{message}</p>
-                            {isLoading ?
-                            <h2>Loading</h2> :
-                            <p>{JSON.stringify(data)}</p>}
-                        </>
-                    )
-                 }
-                 }
-            </DataFetcher>
-        </div>
-    )
+class App extends Component {
+    state = { count: 0 }
+    
+    increment = () => this.setState(prevState => ({count: prevState.count + 1}))
+    
+    render() {
+        console.log("[GP] [P] [C] [GC] APP just rendered")
+        return (
+            <div className="container mx-auto pt-4">
+                <button className="border py-0.5 px-3.5 bg-gray-300 rounded" onClick={this.increment}>+1</button>
+                <h2>{this.state.count}</h2>
+                <p>I'm the App component</p>
+                <GrandParent />
+                <GrandParent />
+            </div>
+        )    
+    }
 }
 
 export default App
