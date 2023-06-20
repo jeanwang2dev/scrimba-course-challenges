@@ -1,8 +1,12 @@
 import './style.css';
-import React from "react-dom";
+import React from "react";
 import ReactDOM from 'react-dom/client';
 import App from "./App";
 
+const ThemeContext = React.createContext()
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <App />
+    <ThemeContext.Provider value="light">
+        <App />
+    </ThemeContext.Provider> 
 )
