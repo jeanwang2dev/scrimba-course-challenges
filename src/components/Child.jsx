@@ -1,6 +1,6 @@
-import React, {Component} from "react"
+import React, {PureComponent} from "react"
 
-class GrandChild extends Component {
+class GrandChild extends PureComponent {
     render() {
         console.log("[ ]   [ ]   [ ]   [👶🏻] rendered")
         return (
