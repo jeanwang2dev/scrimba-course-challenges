@@ -1,6 +1,6 @@
-import React, {Component} from "react"
+import React, {memo} from "react"
 
-function GrandChild() {
+export default memo(function GrandChild() {
     
     console.log("[ ]   [ ]   [ ]   [👶🏻] rendered")
     return (
@@ -8,7 +8,4 @@ function GrandChild() {
             <p>I'm a GrandChild Component</p>
         </div>
     )
-}
-
-
-export default GrandChild
+})

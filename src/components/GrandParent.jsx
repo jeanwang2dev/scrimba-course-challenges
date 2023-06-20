@@ -1,4 +1,4 @@
-import React, {PureComponent} from "react"
+import React from "react"
 import Parent from "./Parent"
 
 function GrandParent() {  
@@ -14,4 +14,4 @@ function GrandParent() {
 }
 
 
-export default GrandParent
+export default React.memo(GrandParent)

@@ -1,4 +1,4 @@
-import React, {PureComponent} from "react"
+import React from "react"
 import Child from "./Child"
 
 function Parent() {
@@ -13,4 +13,4 @@ function Parent() {
     )
 }
 
-export default Parent
+export default React.memo(Parent)
