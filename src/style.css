@@ -14,20 +14,14 @@
 
 @layer components{
 
-    header {
-        @apply p-5;
-    }
 
     button {
-        @apply p-2 border-0 m-2 rounded;
+        @apply flex items-center bg-gray-300 text-slate-800 px-4 py-2 border-0 m-2 rounded cursor-pointer font-bold ;
     }
 
-    .dark-theme {
-        @apply text-gray-200 bg-slate-800;
+    button svg {
+        @apply mr-2 text-green-800;
     }
 
-    .light-theme {
-        @apply bg-gray-200 text-slate-800;
-    }
     
 }

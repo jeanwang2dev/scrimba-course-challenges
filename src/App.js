@@ -1,14 +1,16 @@
 import React from "react"
-
-import Header from "./components/Header"
 import Button from "./components/Button"
+import { FaMoneyBillAlt } from "react-icons/fa";
 
 function App() {
     return (
-        <div>
-            <Header />
-            <Button />
-        </div>
+        <main className="container mx-auto">
+            
+            <Button>
+                <FaMoneyBillAlt />
+                Buy Now!
+            </Button>
+        </main>
     )
 }
 
