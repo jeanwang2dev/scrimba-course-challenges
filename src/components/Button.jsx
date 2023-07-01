@@ -1,5 +1,5 @@
 export default function Button(props) {
     return (
-        <button>{props.children}</button>
+        <button onClick={props.log}>{props.children}</button>
     )
 }

@@ -16,7 +16,7 @@
 
 
     button {
-        @apply flex items-center bg-gray-300 text-slate-800 px-4 py-2 border-0 m-2 rounded cursor-pointer font-bold ;
+        @apply flex items-center bg-slate-100 border border-black text-slate-800 px-4 py-2  m-2 rounded cursor-pointer font-bold ;
     }
 
     button svg {
