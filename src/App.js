@@ -4,9 +4,9 @@ import { FaMoneyBillAlt } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc"
 
 function App() {
-    function log() {
-        console.log("Logging in...")
-    }
+    // function log() {
+    //     console.log("Logging in...")
+    // }
     return (
         <main className="container mx-auto">
             
@@ -15,7 +15,7 @@ function App() {
                 Buy Now!
             </Button>
 
-            <Button log={log}>
+            <Button onClick={ () => console.log("Logging in...")}>
                 <FcGoogle />
                 Log in with Google
             </Button>
