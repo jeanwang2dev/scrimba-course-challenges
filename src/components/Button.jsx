@@ -1,7 +1,8 @@
-export default function Button(props) {
+export default function Button({children, varient, ...rest}) {
+    console.log(rest)
     return (
-        <button {...props}>
-            {props.children}
+        <button {...rest}>
+            {children}
         </button>
     )
 }

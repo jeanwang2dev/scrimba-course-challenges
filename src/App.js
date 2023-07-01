@@ -13,6 +13,7 @@ function App() {
             </Button>
 
             <Button 
+                varient
                 style={{color:"green"}}
                 onClick={ () => console.log("Logging in...")}>
                 <FcGoogle />
