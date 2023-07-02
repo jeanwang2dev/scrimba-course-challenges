@@ -13,6 +13,14 @@ module.exports = {
         lg: '976px',
         xl: '1440px'
       },
+      colors: {
+        warning: "#FBBF24",
+        warningLight: "#FFFBEB",
+        danger: "#F87171",
+        dangerLight: "#FEF2F2",
+        success: "#047857",
+        successLight: "#ECFDF5"
+      }
     },
   },
   plugins: [],
