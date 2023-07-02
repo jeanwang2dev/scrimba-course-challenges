@@ -3,7 +3,7 @@ export default function Button({children, size, ...rest}) {
     if( size === 'lg') sizeClass="button-large"
     if( size === 'sm') sizeClass="button-small"
     return (
-        <button className={sizeClass} {...rest}>
+        <button {...rest} className={sizeClass}  >
             {children}
         </button>
     )

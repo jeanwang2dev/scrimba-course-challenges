@@ -6,7 +6,7 @@ function App() {
     return (
         <main className="container mx-auto">
 
-            <Button size="lg">
+            <Button className="btn-green" size="lg" >
                 <FcGoogle />
                 Log in with Google
             </Button>
