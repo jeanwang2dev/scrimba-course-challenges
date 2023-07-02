@@ -1,7 +1,9 @@
-export default function Button({children, varient, ...rest}) {
-    console.log(rest)
+export default function Button({children, size, ...rest}) {
+    let sizeClass 
+    if( size === 'lg') sizeClass="button-large"
+    if( size === 'sm') sizeClass="button-small"
     return (
-        <button {...rest}>
+        <button className={sizeClass} {...rest}>
             {children}
         </button>
     )
