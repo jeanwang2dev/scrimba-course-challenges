@@ -14,12 +14,16 @@ module.exports = {
         xl: '1440px'
       },
       colors: {
-        warning: "#FBBF24",
-        warningLight: "#FFFBEB",
-        danger: "#F87171",
-        dangerLight: "#FEF2F2",
-        success: "#047857",
-        successLight: "#ECFDF5"
+        'navy': '#1F2937',
+        'pink': '#DA6AEC',
+        'red':'#F43F5E',
+        'blue':'#2F74DC',
+        'green':'#22CD90',
+        'white':'#ffffff',
+        whitesmoke: '#f5f5f5',
+      },
+      fontFamily: {
+        'karla': ['Karla', 'sans-serif'],
       }
     },
   },
