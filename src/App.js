@@ -36,12 +36,8 @@ function App() {
             /> */}
 
             <Menu> 
-                <MenuButton
-                    buttonText={"Sports"}
-                    // onClick={toggle}
-                />
-
-                {open && <MenuDropdown items={["Tennis", "Racquetball", "Pickleball", "Squash"]} />}
+                <MenuButton>Sports</MenuButton>
+                <MenuDropdown items={["Tennis", "Racquetball", "Pickleball", "Squash"]} />
             </Menu>
         </main>
     )

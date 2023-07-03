@@ -20,27 +20,29 @@
 
 }
 
+
+button.button-lg {
+    @apply px-8 py-6;
+}
+
+button.button-sm {
+    @apply px-2 py-3 text-xs;
+}
+
+
+button.button-success {
+    @apply bg-successLight text-success;
+}
+    
+button.button-warning {
+    @apply bg-warningLight text-warning;
+}
+    
+button.button-danger {
+    @apply bg-dangerLight text-danger;
+} 
+
 @layer components {
-
-    button.button-sm {
-        @apply px-2 py-3 text-xs;
-    }
-
-    button.button-lg {
-        @apply px-4 py-6;
-    }
-
-    button.button-success {
-        @apply bg-successLight text-success;
-    }
-        
-    button.button-warning {
-        @apply bg-warningLight text-warning;
-    }
-        
-    button.button-danger {
-        @apply bg-dangerLight text-danger;
-    }
 
     .menu {
         @apply relative inline-block;
