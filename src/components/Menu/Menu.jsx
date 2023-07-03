@@ -8,7 +8,7 @@ export default function Menu({ children }) {
     }  
     return (
         <div className="menu">
-            {React.Children.map(children, child => {
+            {React.Children.map(children, (child) => {
                 return React.cloneElement(child, {
                     open,
                     toggle
