@@ -22,12 +22,12 @@
     }
     
     .avatar-letters {
-        @apply bg-red text-white flex items-center justify-center text-4xl font-karla;
+        @apply text-white flex items-center justify-center text-4xl font-karla;
     }
 
-    .avatar-icon {
+    /* .avatar-icon {
         @apply bg-navy;
-    }
+    } */
 
     .avatar > svg {
         @apply h-full w-full text-whitesmoke translate-y-5;

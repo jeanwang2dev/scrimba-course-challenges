@@ -26,6 +26,11 @@ import { IoPersonSharp } from "react-icons/io5"
  */
 
 export default function Avatar({children, src, alt}) {
+
+    const colorArr = ['bg-navy', 'bg-pink', 'bg-red', 'bg-blue', 'bg-green']
+    const index = Math.floor(Math.random() * colorArr.length)
+    const colorClass = colorArr[index]
+    //console.log(colorClass)
     
     if(src) {
         return (
@@ -37,13 +42,13 @@ export default function Avatar({children, src, alt}) {
 
     if(children) {
         return (
-            <div className="avatar avatar-letters">
+            <div className={`avatar avatar-letters ${colorClass}`}>
                 {children}
             </div>
         )
     } else {
         return (
-            <div className="avatar avatar-icon">
+            <div className={`avatar avatar-icon ${colorClass}`}>
                 <IoPersonSharp />
             </div>
         )
