@@ -2,6 +2,7 @@ import React from "react"
 import Menu from "./components/Menu/Menu"
 import MenuButton from "./components/Menu/MenuButton"
 import MenuDropdown from "./components/Menu/MenuDropdown"
+import MenuItem from "./components/Menu/MenuItem"
 
 /**
  * Challenge:
@@ -28,6 +29,7 @@ function App() {
     // function toggle() {
     //     setOpen(prevOpen => !prevOpen)
     // }
+    const sports = ["Tennis", "Racquetball", "Pickleball", "Squash"]
     return (
         <main className="container mx-auto pt-10">
             {/* <Menu
@@ -37,7 +39,11 @@ function App() {
 
             <Menu> 
                 <MenuButton>Sports</MenuButton>
-                <MenuDropdown items={["Tennis", "Racquetball", "Pickleball", "Squash"]} />
+                <MenuDropdown>
+                    {
+                        sports.map( sport => (<MenuItem key={sport}>{sport}</MenuItem>))
+                    }
+                </MenuDropdown>
             </Menu>
         </main>
     )
