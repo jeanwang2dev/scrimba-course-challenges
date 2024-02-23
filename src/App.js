@@ -23,20 +23,16 @@ import MenuItem from "./components/Menu/MenuItem"
  * there's more we need to learn before we can do that.
  */
 
-function App() {
-    // const [open, setOpen] = React.useState(true)
 
-    // function toggle() {
-    //     setOpen(prevOpen => !prevOpen)
-    // }
+function App() {
+    const [open, setOpen] = React.useState(true)
+
+    function toggle() {
+        setOpen(prevOpen => !prevOpen)
+    }
     const sports = ["Tennis", "Racquetball", "Pickleball", "Squash"]
     return (
         <main className="container mx-auto pt-10">
-            {/* <Menu
-                buttonText="Sports"
-                items={["Tennis", "Racquetball", "Pickleball", "Squash"]}
-            /> */}
-
             <Menu> 
                 <MenuButton>Sports</MenuButton>
                 <MenuDropdown>
