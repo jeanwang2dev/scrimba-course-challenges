@@ -25,11 +25,6 @@ import MenuItem from "./components/Menu/MenuItem"
 
 
 function App() {
-    const [open, setOpen] = React.useState(true)
-
-    function toggle() {
-        setOpen(prevOpen => !prevOpen)
-    }
     const sports = ["Tennis", "Racquetball", "Pickleball", "Squash"]
     return (
         <main className="container mx-auto pt-10">
