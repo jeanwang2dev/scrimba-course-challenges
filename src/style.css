@@ -12,22 +12,47 @@
     }
 }
 
-@layer components{
+.container {
+    @apply h-screen;
+}
 
-    header {
-        @apply p-5;
-    }
+header {
+    @apply text-3xl h-24 pt-6 pl-4;
+}
 
-    button {
-        @apply p-2 border-0 m-2 rounded;
-    }
+header.dark-theme {
+    @apply bg-sky-950 text-zinc-50;
+}
 
-    .dark-theme {
-        @apply text-gray-200 bg-slate-800;
-    }
+header.light-theme {
+    background-color: #E0F2FE;
+    color: #0C4A6E;
+}
 
-    .light-theme {
-        @apply bg-gray-200 text-slate-800;
-    }
+button {
+    @apply p-2 border border-black m-2 rounded;
+}
+
+.container.dark-theme {
+    background-color: #0C4A6E;
+    color: #F0F9FF;
+}
+
+.container.light-theme {
+    background-color: #F0F9FF;
+    color: #0C4A6E;
+}
+
+button.dark-theme {
+    border: 1px solid #F0F9FF;
+    background-color: #0C4A6E;
+    color: #F0F9FF;
+}
+
+button.light-theme {
+    border: 1px solid #0C4A6E;
+    background-color: #F0F9FF;
+    color: #0C4A6E;
     
 }
+    

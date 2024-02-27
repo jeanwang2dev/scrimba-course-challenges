@@ -2,14 +2,19 @@ import React from "react"
 
 import Header from "./components/Header"
 import Button from "./components/Button"
+import { createContext } from 'react';
 
-function App() {
+const ThemeContext = React.createContext()
+
+export default function App() {
     return (
-        <div>
-            <Header />
-            <Button />
-        </div>
+        <ThemeContext.Provider value='dark'>
+            <div className="container dark-theme">
+                <Header />
+                <Button />
+            </div>
+        </ThemeContext.Provider>
     )
 }
 
-export default App
+export { ThemeContext }

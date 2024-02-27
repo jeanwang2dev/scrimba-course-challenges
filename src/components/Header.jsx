@@ -1,17 +1,13 @@
 import React, {Component} from "react"
-import ThemeContext from "../themeContext"
+import {ThemeContext} from "../App"
 
-class Header extends Component {
-    render() {
-        //const value = this.context
+export default function Header() {
+        const value = React.useContext(ThemeContext)
+        // console.log(value)
+        const result = value[0].toUpperCase() + value.slice(1)
         return (
-            <header className={`${this.context}-theme`}>
-                <h2 className="font-bold">{this.context} Theme</h2>
-            </header>
-        )    
-    }
+            <header className={`${value}-theme`}>
+                <h1 className="font-bold">{result} Theme</h1>
+            </header>    
+        )
 }
-
-Header.contextType = ThemeContext
-
-export default Header
