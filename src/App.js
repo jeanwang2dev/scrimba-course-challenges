@@ -7,8 +7,10 @@ import { createContext } from 'react';
 const ThemeContext = React.createContext()
 
 export default function App() {
+    const [theme, setTheme] = React.useState('dark')
+
     return (
-        <ThemeContext.Provider value='dark'>
+        <ThemeContext.Provider value={theme}>
             <div className="container dark-theme">
                 <Header />
                 <Button />

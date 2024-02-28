@@ -8,15 +8,3 @@ export default function Button() {
     )
 }
 
-// class Button extends Component {
-//     render() {
-//         console.log(this.context)
-//         return (
-//             <button className={this.context + "-theme"}>Switch Theme</button>
-//         )    
-//     }
-// }
-
-// Button.contextType = ThemeContext
-
-// export default Button
