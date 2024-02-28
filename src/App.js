@@ -9,9 +9,13 @@ const ThemeContext = React.createContext()
 export default function App() {
     const [theme, setTheme] = React.useState('dark')
 
+    function toggleTheme(){
+        setTheme(prevTheme => prevTheme === "light" ? "dark" : "light")
+    }
+
     return (
-        <ThemeContext.Provider value={theme}>
-            <div className="container dark-theme">
+        <ThemeContext.Provider value={{theme, toggleTheme}}>
+            <div className={`container ${theme}-theme`}>
                 <Header />
                 <Button />
             </div>
