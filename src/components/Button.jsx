@@ -7,7 +7,7 @@ export default function Button() {
 
     return (
         <button className={`${theme}-theme`} onClick={toggleTheme}>
-            Switch Theme
+            Switch Theme HERE!!
         </button>
     )
 }
